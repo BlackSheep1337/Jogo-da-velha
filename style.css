@@ -35,6 +35,11 @@
   border: 1px solid black;
   width: 130px;
   height: 100px;
+  color: white;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-interager {
@@ -63,6 +68,11 @@
   border-radius: 5px;
   padding: 10px 0;
   color: white;
+}
+
+.game-interager .turnOff {
+  opacity: 0.1;
+  transition: 0.2s;
 }
 
 .footer {
