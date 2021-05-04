@@ -60,8 +60,11 @@ const logicWin = () => {
 }
 
 const winner = (winner) => {
-  setTimeout(() => { alert(`Jogador: ${winner} Venceu`); }, 500);
-  setTimeout(() => { location.reload()}, 600);
+  const result = document.getElementById('result');
+  result.innerHTML = `Jogador ${winner} venceu`;
+  result.style.display = 'block';
+  result.style.paddingTop = '70px';
+  setTimeout(() => { location.reload()}, 2500);
 }
 
 // transition moviment from one player to another.
