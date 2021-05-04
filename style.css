@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgba(250, 235, 215, 0.616);
+}
+
 .main {
   width: 500px;
   height: 500px;
@@ -44,7 +48,6 @@
 
 .game-interager {
   display: flex;
-  flex-direction: row;
   margin: 0 50px;
   font-weight: bold;
   font-size: 20px;
@@ -71,8 +74,21 @@
 }
 
 .game-interager .turnOff {
-  opacity: 0.1;
+  opacity: 0.2;
   transition: 0.2s;
+}
+
+.restart {
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  border-radius: 5px;
+  border: 3px solid black;
+  padding-top: 10px;
+  font-size: 20px;
+  height: 50px;
+  color: white;
+  background-color: rgba(0, 128, 0, 0.76);
 }
 
 .footer {
