@@ -36,29 +36,31 @@ addBlocksCol();
 // win logic
 const logicWin = () => {
   const blocks = document.querySelectorAll('.blockCol');
-  let winner = undefined;
 
-  const a1 = blocks[0].getAttribute('class');
-  const a2 = blocks[1].getAttribute('class');
-  const a3 = blocks[2].getAttribute('class');
+  const a1 = window.getComputedStyle(blocks[0], null).getPropertyValue("background-color");
+  const a2 = window.getComputedStyle(blocks[1], null).getPropertyValue("background-color");
+  const a3 = window.getComputedStyle(blocks[2], null).getPropertyValue("background-color");
   
-  const b1 = blocks[3].getAttribute('class');
-  const b2 = blocks[4].getAttribute('class');
-  const b3 = blocks[5].getAttribute('class');
+  const b1 = window.getComputedStyle(blocks[3], null).getPropertyValue("background-color");
+  const b2 = window.getComputedStyle(blocks[4], null).getPropertyValue("background-color");
+  const b3 = window.getComputedStyle(blocks[5], null).getPropertyValue("background-color");
   
-  const c1 = blocks[6].getAttribute('class');
-  const c2 = blocks[7].getAttribute('class');
-  const c3 = blocks[8].getAttribute('class');
-  console.log(a1)
+  const c1 = window.getComputedStyle(blocks[6], null).getPropertyValue("background-color");
+  const c2 = window.getComputedStyle(blocks[7], null).getPropertyValue("background-color");
+  const c3 = window.getComputedStyle(blocks[8], null).getPropertyValue("background-color");
+  
 
-  if ((a1 === b1 && a1 === c1) || (a1 === a2 && a1 === a3) || (a1 === b2 && a1 === c3) && (a1 !== '')) {
-    winner = a1;
-  } else if ((b2 === b1 && b2 === b3) || (b2 === a2 && b2 === c2) || (b2 === a3 && b2 === c1) && (b2 !== '')) {
-    winner = b2;
-  } else if ((c3 === c2 && c3 === c1) || (c3 === a3 && c3 === b3) && (c3 !== '')) {
-    winner = c3;
+  if (((a1 === b1 && a1 === c1) || (a1 === a2 && a1 === a3) || (a1 === b2 && a1 === c3)) && a1 !== 'rgba(0, 0, 0, 0)') {
+    winner(a1);
+  } else if (((b2 === b1 && b2 === b3) || (b2 === a2 && b2 === c2) || (b2 === a3 && b2 === c1)) && b2 !== 'rgba(0, 0, 0, 0)') {
+    winner(b2);
+  } else if (((c3 === c2 && c3 === c1) || (c3 === a3 && c3 === b3)) && c3 !== 'rgba(0, 0, 0, 0)') {
+    winner(c3);
   } 
+}
 
+const winner = (winner) => {
+  console.log(winner);
 }
 
 // transition moviment from one player to another.
