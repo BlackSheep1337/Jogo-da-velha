@@ -49,13 +49,14 @@ const logicWin = () => {
   const c1 = blocks[6].getAttribute('class');
   const c2 = blocks[7].getAttribute('class');
   const c3 = blocks[8].getAttribute('class');
+  console.log(a1)
 
-  if ((a1 === b1 && a1 === c1) || (a1 === a2 && a1 === a3) || (a1 === b2 && a1 === c3) && a1 !== '') {
-    
-  } else if ((b2 === b1 && b2 === b3) || (b2 === a2 && b2 === c2) || (b2 === a3 && b2 === c1) && b2 !== '') {
-    
-  } else if ((c3 === c2 && c3 === c1) || (c3 === a3 && c3 === b3) && c3 !== '') {
-    
+  if ((a1 === b1 && a1 === c1) || (a1 === a2 && a1 === a3) || (a1 === b2 && a1 === c3) && (a1 !== '')) {
+    winner = a1;
+  } else if ((b2 === b1 && b2 === b3) || (b2 === a2 && b2 === c2) || (b2 === a3 && b2 === c1) && (b2 !== '')) {
+    winner = b2;
+  } else if ((c3 === c2 && c3 === c1) || (c3 === a3 && c3 === b3) && (c3 !== '')) {
+    winner = c3;
   } 
 
 }
